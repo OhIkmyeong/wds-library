@@ -9,7 +9,7 @@
     grid-template-columns:repeat(auto-fit,minmax(350px, 1fr));
     gap:2rem;
     position:relative;
-    width:calc(100% - 3rem); margin:0 auto;}
+    width:calc(100% - 3rem); margin:0 auto 4rem;}
 
 .card{
     display:flex; flex-flow:column nowrap;
