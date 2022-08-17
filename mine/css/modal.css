@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+#modal{
+    position:absolute;
+    border:1px solid #ccc; border-radius:8px;
+    background:#fff;
+    box-shadow:0 0 5px rgba(0,0,0,.1);
+}
+#btn-modal-close{
+    display:block;
+    position:absolute;
+    top:0;right:0;
+    width:35px;aspect-ratio:1/1;
+    background:transparent;border:none;
+    font-weight:bold; color:#999;
+}
+
+#modal-head{
+    text-align:center;
+    padding:1em; padding-bottom:.5em;
+}
+
+#modal-body{
+    position:relative;
+    padding:0 1.5rem;
+}
+

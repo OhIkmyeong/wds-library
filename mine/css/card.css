@@ -1,0 +1,41 @@
+@charset "utf-8";
+#pageTitle{
+    padding-top:2em;
+    text-transform:uppercase;
+    font-size:2rem;text-align:center;}
+
+#wrap-card{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px, 1fr));
+    gap:2rem;
+    position:relative;
+    width:calc(100% - 3rem); margin:0 auto;}
+
+.card{
+    display:flex; flex-flow:column nowrap;
+    justify-content:space-between;
+    position:relative; overflow:hidden;
+    background:var(--white);
+    border:var(--border); border-radius:var(--rad);
+    box-shadow:4px 4px 0 rgba(0,0,0,.05);}
+
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+
+.card-txt{padding:1rem 2rem;line-height:1.6;}
+.card-btns{
+    display:flex;
+    gap:.5rem;
+    position:relative;
+    padding:0 2rem 2rem; margin-top:1rem;}
+
+.card-btn{
+    padding:.5em 1em;
+    background:var(--white);
+    border:1px solid var(--blue); border-radius:calc(var(--rad) / 2); 
+    font-weight:500; color:var(--blue);}
+
+    /* 색상 */
+    .card-btn.blue{background:var(--blue);color:var(--white);}
+
+    /* hover */
+    .card-btn:hover{background:var(--indigo);border-color:var(--indigo);color:var(--white);}

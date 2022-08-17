@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mine</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css"/>
+    <script src="./js/main.js" type="module"></script>
+</head>
+<body>
+    <h1 id="pageTitle">Houses For Sale</h1>
+
+    <div id="wrap-card">
+        <template>
+            <section class="card">
+                <img src="https://source.unsplash.com/178j8tJrNlc" alt=""/>
+                <article class="card-txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam tempore nostrum autem vel esse libero!</article>
+                <article class="card-btns">
+                    <button class="card-btn blue">Details</button>
+                    <button class="card-btn">Contact Seller</button>
+                </article>
+            </section><!-- card -->
+        </template>
+    </div><!-- wrap-card -->
+
+    <!-- modal -->
+    <div id="highlighter"></div><!-- highlighter -->
+
+    <div id="modal">
+        <button id="btn-modal-close">X</button>
+        <h3 id="modal-head">TEST TITLE</h3>
+        <section id="modal-body">This is the body of the modal...</section>
+        <ul id="modal-pager">
+            <li class="on"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <section id="modal-foot">
+            <button class="btn-modal-back">Back</button>
+            <button class="btn-modal-next">Next</button>
+        </section><!-- modal-foot -->
+    </div><!-- modal -->
+</body>
+</html>
