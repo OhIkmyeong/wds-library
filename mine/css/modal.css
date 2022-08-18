@@ -45,9 +45,15 @@
 #modal-pager li{
     width:20px; height:5px;
     background:#ddd;
-    border-radius:2px;}
+    border-radius:2px;
+    
+}
 
-    #modal-pager li.on{background:var(--blue);}
+    #modal-pager li.on{
+        background:var(--blue); box-shadow:
+            0 0 2px 1px #fff,
+            0 0 10px 1px var(--blue-op-2);
+        transition:box-shadow .2s .5s;}
 
 /* footer */
 #modal-foot{
