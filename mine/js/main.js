@@ -44,5 +44,6 @@ modalMaker.init();
 
 $btnDemo.addEventListener('click',()=>{
     modalMaker.reset_idx();
+    modalMaker.reset_ftr_btn();
     modalMaker.display_modal();
 });

@@ -92,23 +92,32 @@ export class ModalMaker{
             /* NEXT */
             this.idx++;
             $back.classList.remove('off');
-            if(this.idx >= this.data.length){
+            if(this.idx >= this.data.length - 1){
                 this.idx = this.data.length - 1;
                 $next.classList.add('off');
             }//if
+            $next.blur();
         }else{
             /* PREV */
             this.idx--;
             $next.classList.remove('off');
 
-            if(this.idx < 0){
+            if(this.idx <= 0){
                 this.reset_idx();
-                $back.classList.add('off');
+                this.reset_ftr_btn();
             }//if
+            $back.blur();
         }//if else
 
         this.display_modal();
     }//on_click_ftr_modal
+
+    reset_ftr_btn(){
+        const $back = document.getElementById('btn-modal-back');
+        const $next = document.getElementById('btn-modal-next');
+        $back.classList.add('off');
+        $next.classList.remove('off');
+    }//reset_ftr_btn
 
     /* 모달 내용 바꾸기 */
     change_content(){
