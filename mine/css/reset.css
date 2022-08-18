@@ -18,6 +18,7 @@ button{font-family:inherit;color:inherit;cursor:pointer;}
 
 html,body{
     font-family:'Poppins', sans-serif; color:var(--black);
+    font-size:16px;
 }
 
 body{
@@ -25,4 +26,11 @@ body{
     justify-content:center; align-items:center;
     gap:4rem;
     background:var(--bg);
+}
+
+#btn-live-demo{
+    padding:.8em 2em;
+    background:var(--blue);
+    border:none; border-radius:var(--rad);
+    font-size:1.2rem; color:var(--white);
 }

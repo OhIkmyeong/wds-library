@@ -5,7 +5,7 @@ const cardData = fake_card_data_maker(10);
 const modalData = [
     {
         title : "Hello World",
-        body : "This the first Tutorial of Blah Blah... 잘 따라 와보셈"
+        body : "<p>This the first Tutorial of Blah Blah...</p><p>잘 따라 와보셈</p>",
     },
     {
         title : "Title(2)",
@@ -24,6 +24,7 @@ const modalData = [
     {
         title : "존버",
         body : "버터플 야도란 피존투 또가스",
+        focus : true
     },
     {
         title : "Title(4)",
@@ -36,6 +37,12 @@ const modalData = [
     },
 ];
 
-const cardMaker = new CardMaker(cardData);
+new CardMaker(cardData);
 const modalMaker  = new ModalMaker(modalData);
+const $btnDemo = document.getElementById('btn-live-demo');
 modalMaker.init();
+
+$btnDemo.addEventListener('click',()=>{
+    modalMaker.reset_idx();
+    modalMaker.display_modal();
+});

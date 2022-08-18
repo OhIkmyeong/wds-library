@@ -2,7 +2,8 @@
 /* 툴팁 */
 #modal{
     position:absolute;
-    /* top:0;left:0; */
+    top:0;left:0;
+    min-width:300px; max-width:90%;
     border:1px solid #ccc; border-radius:8px;
     background:#fff;
     box-shadow:0 0 5px rgba(0,0,0,.1);
@@ -24,8 +25,9 @@
 }
 
 #modal-head{
-    text-align:center;
     padding:1em; padding-bottom:.5em;
+    text-align:center; font-size:1.3rem;
+    text-transform:uppercase; letter-spacing:-.01em;
 }
 
 #modal-body{
@@ -33,8 +35,52 @@
     padding:0 1.5rem;
 }
 
+/* pager */
+#modal-pager{
+    display:flex; flex-flow:row nowrap;
+    justify-content:center; align-items:center;
+    gap:3px;
+    margin-top:1rem;}
+
+#modal-pager li{
+    width:20px; height:5px;
+    background:#ddd;
+    border-radius:2px;}
+
+    #modal-pager li.on{background:var(--blue);}
+
+/* footer */
+#modal-foot{
+    display:flex;flex-wrap:row nowrap;
+    justify-content:space-between; align-items:center;
+    position:relative;
+    margin-top:1rem;
+    border-top:1px solid #ddd;}
+
+#btn-modal-back,
+#btn-modal-next{
+    padding:1em 2em;
+    background:transparent;
+    border:none;
+    color:#777; font-weight:500; font-size:12px;
+    user-select:none;}
+
+    /* hover */
+    #btn-modal-back:hover,
+    #btn-modal-next:hover{background:#f9f9f9;}
+    /* focus */
+    #btn-modal-back:focus,
+    #btn-modal-next:focus{background:#eee;color:var(--blue);}
+    /* off */
+    #modal-foot button.off{
+        pointer-events:none; color:#ccc;}
+
+#btn-modal-back{border-right:1px solid #fafafc;}
+#btn-modal-next{border-left:1px solid #fafafc;}
+    
+    
 /* 하이라이터 */
-#highlighter{
+#highlighter-box{
     position:absolute;
     top:0;left:0;
     border:3px solid #000;
@@ -43,7 +89,7 @@
     transition:opacity .5s;
 }
 
-    #highlighter.off{
+    #highlighter-box.off{
         opacity:0;
         pointer-events:none;user-select:none;
     }

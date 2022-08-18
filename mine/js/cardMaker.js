@@ -34,7 +34,7 @@ export class CardMaker{
         const $frag = document.createDocumentFragment();
         this.data.forEach((data,idx) => {
             const $card = this.make_card(data);
-            if([2,5,8].includes(idx)){
+            if([2,5,6,8].includes(idx)){
                 $card.dataset.focus = "focus";
             }//if
             $frag.appendChild($card);
